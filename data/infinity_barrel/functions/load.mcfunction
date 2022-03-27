@@ -20,3 +20,5 @@ scoreboard players set @a IB_data 0
 # 1 < $max_storage < 2147483646
 scoreboard players set $max_storage IB_data 65536
 
+tellraw @a ["",{"text":"[Infinity Barrel]","color":"aqua"},{"text":" Ver.1.0.0\n","color":"green"},{"text":"Produced by ","color":"gray"},{"text":"yuton502","color":"white"}]
+
