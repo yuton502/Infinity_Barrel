@@ -1,0 +1,15 @@
+{
+  "criteria": {
+    "item_frame": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:item_frame"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "infinity_barrel:interacted_item_frame"
+  }
+}
