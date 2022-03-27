@@ -24,13 +24,15 @@
 
  # 設定 / Configration
  
- infinity_barrel:load.mcfunction
+ infinity_barrel:load.mcfunctionにあります。
  ```mcfunction
  # infinity_barrelの最大容量
  # Maximum storage of infinity_barrel
  # 1 < $max_storage < 2147483646
  scoreboard players set $max_storage IB_data 65536
  ```
+ - **$max_storage** <br>
+ Infinity Barrelの最大容量を変更できます。初期値は65,536個(1,024スタック)です。
 
  # 既知の問題 / Known issues
  - 付近をピストンで押さないでください。村人の位置がずれ、操作できなくなります。<br>Do not push by piston around. Villagers is be out of position, so can't operate.
