@@ -6,7 +6,7 @@
 tag @s add IB_watcher
 data modify storage infinity_barrel: tag set value "IB_sent_villager"
 scoreboard players set $success_entity IB_data 0
-execute as @a[tag=IB_watcher] at @s anchored eyes run function infinity_barrel:recursive_search
+execute as @a[tag=IB_watcher] at @s anchored eyes run function infinity_barrel:add_tag
 #execute positioned ^ ^ ^5.1 as @e[type=minecraft:item_frame,distance=..5,tag=infinity_barrel] positioned as @s positioned ^ ^ ^100 facing entity @a[tag=IB_watcher,limit=1] eyes positioned ^ ^ ^100 positioned ~-0.5 ~-0.5 ~-0.5 if entity @s[dx=0,dy=0,dz=0] as @e[type=minecraft:item_frame,dx=0,dy=0,dz=0,limit=1,sort=nearest,tag=infinity_barrel] run tag @s add IB_sent_villager
 #tag @e[type=minecraft:villager,tag=infinity_barrel,distance=..5,nbt={HurtTime:10s}] add IB_sent_villager
 #execute as @e[type=minecraft:villager,tag=IB_sent_villager] at @s run tag @e[type=minecraft:item_frame,distance=..0.1,tag=infinity_barrel] add IB_sent_villager

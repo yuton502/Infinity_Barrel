@@ -14,3 +14,4 @@ execute as @e[type=minecraft:item,tag=IB_changing_item] run data modify entity @
 tag @e[type=minecraft:item,tag=IB_changing_item] remove IB_changing_item
 
 execute if score @s IB_data matches 1.. run function infinity_barrel:destroy_infinity_barrel
+execute if score @s IB_data matches 0.. run tag @s remove infinity_barrel

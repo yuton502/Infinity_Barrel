@@ -5,7 +5,7 @@
 #リセット
 data modify storage player_item_tuner:_ overflow set value false
 #data modify storage player_item_tuner:_ overflow_count set value 0
-data modify storage infinity_barrel: player.items set from entity @a[tag=IB_watcher,limit=1] Inventory
+data modify storage infinity_barrel: player.items set from entity @p[tag=IB_watcher] Inventory
 data modify storage infinity_barrel: storage_item set from entity @s Item
 scoreboard players set $count IB_data 0
 
