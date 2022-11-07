@@ -9,8 +9,6 @@ data modify storage infinity_barrel: player.temp_item set from storage infinity_
 data modify storage infinity_barrel: player.items[-1].Count set from storage infinity_barrel: storage_item.Count
 data remove storage infinity_barrel: player.items[-1].Slot
 
-#tellraw @p [{"text":"[result] : "},{"nbt":"player.items[-1]","storage":"infinity_barrel:"},{"text":" : "},{"nbt":"storage_item","storage":"infinity_barrel:"}]
-
 
 #プレイヤーのアイテムとアイテムフレームのアイテムを比較
 #成功($success_data=0)したらアイテムNBTと個数を取得
@@ -21,9 +19,6 @@ execute unless data storage infinity_barrel: player.items[-1] run scoreboard pla
 execute if score $success_data IB_data matches ..0 store result score $count IB_data run data get storage infinity_barrel: player.temp_item.Count
 execute if score $success_data IB_data matches ..0 run data modify storage infinity_barrel: player.removing_item set from storage infinity_barrel: player.temp_item
 execute if score $success_data IB_data matches ..0 run data modify storage infinity_barrel: player.removing_item.id set from storage infinity_barrel: player.temp_item.id
-
-#execute if score $success_data IB_data matches 1.. store result score $count IB_data run data modify storage infinity_barrel: player.saving_items append from storage infinity_barrel: player.items[-1]
-#execute if score $success_data IB_data matches 1.. store result score $count IB_data run data modify storage infinity_barrel: player.saving_items[-1].id set from storage infinity_barrel: player.temp_item.id
 
 data remove storage infinity_barrel: player.items[-1]
 

@@ -5,6 +5,3 @@
 #アイテムフレーム
 data merge entity @s {Invulnerable:1b}
 scoreboard players set @s IB_data 0
-
-
-tag @e[tag=infinity_barrel_initial] remove infinity_barrel_initial
