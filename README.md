@@ -30,9 +30,35 @@
  # Maximum storage of infinity_barrel
  # 1 < $max_storage < 2147483646
  scoreboard players set $max_storage IB_data 65536
+
+ # 村人のテレポート方法
+ # 0で遅延テレポート、1で瞬間テレポート(村人は見える)
+ # a way of teleporting a villager
+ # 0 is lazy tereporting, or 1 is instant tereporting(visible a villager)
+ # 0 / 1
+ scoreboard players set $tp_type IB_data 0
  ```
  - **$max_storage** <br>
  Infinity Barrelの最大容量を変更できます。初期値は65,536個(1,024スタック)です。
+ - **$tp_type** <br>
+ 村人のテレポート方法を変更できます。0はテレポートが遅延しますが、村人は見えません。<br>
+ 1は瞬時にテレポートしすぐにinfinity barrelにアクセスできますが、村人は一瞬見えます。
 
- # 既知の問題 / Known issues
- - 付近をピストンで押さないでください。村人の位置がずれ、操作できなくなります。<br>Do not push by piston around. Villagers is be out of position, so can't operate.
+ # アップデート予定 / Planned updates
+ - ホッパーの使用可能
+ - Infinity Barrelを運ぶアイテム
+
+ # 更新履歴 / Changelogs
+ ### Ver.1.1
+
+ ### 変更点 / Changes
+ - アイテムフレームを見たときのみプレイヤーの目の前に村人を召喚するようにした。<br>Changed summoning a villager in front players only if watching a item frame.
+ - 何もアイテムを持っていなかった場合、右クリックした時にアイテムが増殖してしまうバグを修正。<br>Fixed the bug that an item duplicates when right clicking if player don't have any items.
+ - 気に食わなかったfunction名を変更。<br>Changed some function name.
+ - ブロックが破壊された際、infinity_barrelのInvulnerableが0bになるように<br>If block destroyed, infinity_barrel's `Invulnerable` changes 0b.
+
+ ### Ver.1.0
+ 初公開。<br>
+ First release.
+
+
