@@ -34,7 +34,7 @@
  # 村人のテレポート方法
  # 0で遅延テレポート、1で瞬間テレポート(村人は見える)
  # a way of teleporting a villager
- # 0 is lazy tereporting, or 1 is instant tereporting(visible a villager)
+ # 0 is lazy teleporting, or 1 is instant teleporting(visible a villager)
  # 0 / 1
  scoreboard players set $tp_type IB_data 0
  ```
@@ -60,5 +60,3 @@
  ### Ver.1.0
  初公開。<br>
  First release.
-
-
