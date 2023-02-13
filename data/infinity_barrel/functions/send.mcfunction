@@ -13,14 +13,16 @@ execute as @e[tag=IB_sent_villager] run data modify storage infinity_barrel: sto
 
 #渡すためのアイテム数を指定
 execute as @e[tag=IB_sent_villager] if score @s IB_data < $64 IB_data store result storage infinity_barrel: storage_item.Count byte 1 run scoreboard players get @s IB_data
-execute as @e[tag=IB_sent_villager] if score @s IB_data < $64 IB_data run scoreboard players set @s IB_data 0
 execute as @e[tag=IB_sent_villager] if score @s IB_data >= $64 IB_data store result storage infinity_barrel: storage_item.Count byte 1 run scoreboard players get $64 IB_data
-execute as @e[tag=IB_sent_villager] if score @s IB_data >= $64 IB_data run scoreboard players remove @s IB_data 64
 
 #アイテムを出現させる
-execute as @e[tag=IB_sent_villager] at @s run summon minecraft:item ^ ^ ^0.5 {Item:{id:"minecraft:cobblestone",Count:1b},Tags:["IB_changing_item"]}
+execute as @e[tag=IB_sent_villager] if score @s IB_data matches 1.. at @s run summon minecraft:item ^ ^ ^0.5 {Item:{id:"minecraft:cobblestone",Count:1b},Tags:["IB_changing_item"]}
 execute as @e[type=minecraft:item,tag=IB_changing_item] run data modify entity @s Item set from storage infinity_barrel: storage_item
 tag @e[type=minecraft:item,tag=IB_changing_item] remove IB_changing_item
+
+#アイテム数に応じた減算
+execute as @e[tag=IB_sent_villager] if score @s IB_data < $64 IB_data run scoreboard players set @s IB_data 0
+execute as @e[tag=IB_sent_villager] if score @s IB_data >= $64 IB_data run scoreboard players remove @s IB_data 64
 
 execute as @e[tag=IB_sent_villager] run title @a[tag=IB_watcher] actionbar ["",{"text":"Item Stored : "},{"score":{"name":"@s","objective":"IB_data"}}]
 
