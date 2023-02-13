@@ -13,7 +13,7 @@ execute as @e[type=minecraft:item_frame,tag=infinity_barrel] at @s positioned ^ 
 execute as @e[type=minecraft:villager,tag=infinity_barrel] run data merge entity @s {HurtTime:0s}
 
 #Infinity Barrelを見ていた場合は攻撃力増加を付与
-execute as @a at @s if entity @e[type=minecraft:item_frame,tag=infinity_barrel,distance=..5] anchored eyes run function infinity_barrel:watch_effect
+execute as @a at @s if entity @e[type=minecraft:item_frame,tag=infinity_barrel,distance=..3.5] anchored eyes run function infinity_barrel:watch_effect
 
 
 #右クリック検知
