@@ -1,0 +1,18 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:item_frame"
+          ],
+          "nbt": "{EntityTag:{Tags:[\"Carrying_Infinity_Barrel\"]}}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "infinity_barrel:set_carried_infinity_barrel"
+  }
+}

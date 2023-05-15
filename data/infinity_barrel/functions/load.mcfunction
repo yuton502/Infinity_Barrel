@@ -29,5 +29,5 @@ scoreboard players set $tp_type IB_data 0
 
 execute in minecraft:the_end run forceload add 327680 327680
 
-tellraw @a ["",{"text":"[Infinity Barrel]","color":"aqua"},{"text":" Ver.1.0.1\n","color":"green"},{"text":"Produced by ","color":"gray"},{"text":"yuton502","color":"white"}]
+tellraw @a ["",{"text":"[Infinity Barrel]","color":"aqua"},{"text":" Ver.1.1.0\n","color":"green"},{"text":"Produced by ","color":"gray"},{"text":"yuton502","color":"white"}]
 
