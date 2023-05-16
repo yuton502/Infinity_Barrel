@@ -49,7 +49,14 @@
  - Infinity Barrelを運ぶアイテム
 
  # 更新履歴 / Changelogs
- ### Ver.1.1
+ ### Ver.1.0.2
+ 
+ ### 変更点 / Changes
+- watch_effect.mcfunctionの影響範囲を縮小。<br>It made narrow of affect radius of watch_effect.mcfunction.
+- アイテムの種類が保存されていて、かつ保管数が0の場合に引き出そうとすると、丸石が出てきてしまうバグを修正。<br>Fixed the bug that spawning a cobblestone in case of saved only the item type and stored none.
+- Geyser環境で複製できるバグを緩和<br>Mitigate the bug that replicating item in GeyserMC.
+ 
+ ### Ver.1.0.1
 
  ### 変更点 / Changes
  - アイテムフレームを見たときのみプレイヤーの目の前に村人を召喚するようにした。<br>Changed summoning a villager in front players only if watching a item frame.
