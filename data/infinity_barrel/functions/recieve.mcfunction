@@ -33,5 +33,7 @@ execute if score $temp_count IB_data < $max_storage IB_data as @a[tag=IB_watcher
 execute if score @s IB_data > $max_storage IB_data run scoreboard players operation @s IB_data = $max_storage IB_data
 title @a[tag=IB_watcher] actionbar ["",{"text":"Item Stored : "},{"score":{"name":"@s","objective":"IB_data"}}]
 
+playsound minecraft:entity.item_frame.add_item block @a ~ ~ ~
+
 
 

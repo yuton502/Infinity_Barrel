@@ -1,16 +1,16 @@
 {
   "criteria": {
     "item_frame": {
-      "trigger": "minecraft:player_hurt_entity",
+      "trigger": "minecraft:player_interacted_with_entity",
       "conditions": {
         "entity": {
-          "type": "minecraft:villager",
+          "type": "minecraft:interaction",
           "nbt": "{Tags:[\"infinity_barrel\"]}"
         }
       }
     }
   },
   "rewards": {
-    "function": "infinity_barrel:send"
+    "function": "infinity_barrel:recieve_if"
   }
 }

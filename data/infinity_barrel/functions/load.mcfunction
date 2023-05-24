@@ -2,11 +2,11 @@
 # minecraft:loadから実行されます。
 # @internal
 
-#declare objective IB_right_click
-scoreboard objectives add IB_right_click minecraft.custom:minecraft.talked_to_villager
-
 #declare objective IB_data
 scoreboard objectives add IB_data dummy
+
+#declare objective IB_data_success
+scoreboard objectives add IB_data_success dummy
 
 #declare score_holder $64
 scoreboard players set $64 IB_data 64
@@ -20,14 +20,13 @@ scoreboard players set @a IB_data 0
 # 1 < $max_storage < 2147483646
 scoreboard players set $max_storage IB_data 65536
 
-# 村人のテレポート方法
-# 0で遅延テレポート、1で瞬間テレポート(村人は見える)
-# a way of teleporting a villager
-# 0 is lazy tereporting, or 1 is instant tereporting(visible a villager)
-# 0 / 1
-scoreboard players set $tp_type IB_data 0
+# 村人のテレポート方法(v2.xで廃止)
+# a way of teleporting a villager(removed above v2.x)
 
-execute in minecraft:the_end run forceload add 327680 327680
+#scoreboard players set $tp_type IB_data 0
 
-tellraw @a ["",{"text":"[Infinity Barrel]","color":"aqua"},{"text":" Ver.1.1.0\n","color":"green"},{"text":"Produced by ","color":"gray"},{"text":"yuton502","color":"white"}]
+#村人の削除
+execute as @e[type=minecraft:villager,tag=infinity_barrel] run data merge entity @s {Pos:[0.0d, -65.0d, 0.0d],Health:0f,DeathTime:18s}
+
+tellraw @a ["",{"text":"[Infinity Barrel]","color":"aqua"},{"text":" Ver.2.0.0\n","color":"green"},{"text":"Produced by ","color":"gray"},{"text":"yuton502","color":"white"}]
 

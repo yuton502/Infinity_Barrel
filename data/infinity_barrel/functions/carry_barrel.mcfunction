@@ -18,7 +18,7 @@ data modify entity @e[type=item,tag=IB_Changing_Item,limit=1,sort=nearest] Item.
 data modify entity @e[type=item,tag=IB_Changing_Item,limit=1,sort=nearest] Item.tag.display.Name set value '{"text":"Infinity Barrel","italic":"false"}'
 data modify entity @e[type=item,tag=IB_Changing_Item,limit=1,sort=nearest] Item.tag.display.Lore append value '{"nbt":"Item.id","storage":"infinity_barrel:","color":"white","italic":"false"}'
 
-execute as @e[type=minecraft:villager,tag=infinity_barrel] run data merge entity @s {Pos:[0.0d, -65.0d, 0.0d],Health:0f,DeathTime:18s}
+execute as @e[type=minecraft:interaction,tag=infinity_barrel] run data merge entity @s {Pos:[0.0d, -65.0d, 0.0d],Health:0f,DeathTime:18s}
 
 data merge entity @s {Pos:[0.0d, -65.0d, 0.0d],Health:0f,DeathTime:18s}
 clear @a[tag=IB_watcher] minecraft:minecart 1

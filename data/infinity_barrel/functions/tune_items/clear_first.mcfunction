@@ -10,6 +10,7 @@
 
 # アイテムコピー
 data modify storage player_item_tuner:_ item set from storage player_item_tuner: from
+
 # ifチェック(一致ならmatch=true)
 execute store result storage player_item_tuner:_ match byte 1 run data modify storage player_item_tuner:_ item merge from storage infinity_barrel: player.removing_item
 execute store result storage player_item_tuner:_ match byte 1 if data storage player_item_tuner:_ {match:false}
@@ -20,6 +21,9 @@ execute if data storage player_item_tuner:_ {match:true,overflow:false} run data
 execute if data storage player_item_tuner:_ {match:true,overflow:true} run data modify storage player_item_tuner: to.Count set from storage player_item_tuner:_ overflow_count
 
 #tellraw @p [{"text":"[result] : "},{"nbt":"to.id","storage":"player_item_tuner:"}]
+
+#fromのリセット
+data remove storage player_item_tuner: from
 
 
 
