@@ -14,7 +14,6 @@ execute if score $success_entity IB_data matches 0 run data modify entity @e[typ
 execute store result entity @e[type=item,tag=IB_Changing_Item,limit=1,sort=nearest] Item.components.minecraft:entity_data.Item.components.minecraft:custom_data.Stored int 1 run scoreboard players get @s IB_data
 data modify entity @e[type=item,tag=IB_Changing_Item,limit=1,sort=nearest] Item.components.minecraft:entity_data.Item.id set from entity @s Item.id
 data modify storage infinity_barrel: Item.id set from entity @s Item.id
-#data modify entity @e[type=item,tag=IB_Changing_Item,limit=1,sort=nearest] Item.components.minecraft:entity_data.Item.components.minecraft:custom_data.UUID set from entity @s UUID
 item modify entity @e[type=item,tag=IB_Changing_Item,limit=1,sort=nearest] contents infinity_barrel:set_carry_barrel
 
 execute as @e[type=minecraft:interaction,tag=infinity_barrel] run data merge entity @s {Pos:[0.0d, -65.0d, 0.0d],Health:0f,DeathTime:18s}

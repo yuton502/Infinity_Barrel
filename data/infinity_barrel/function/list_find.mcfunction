@@ -1,8 +1,6 @@
-#> infinity_barrel:item_finder
-# プレイヤーのインベントリの中に目的のアイテムが有るかどうかを検索します。ある場合はアイテムNBTと個数を取得します
-# @input storage infinity_barrel: storage_item
+#> infinity_barrel:list_find
+# Listタグの中に目的のアイテムが有るかどうかを検索します。ある場合はアイテムNBTと個数を取得します
 # @internal
-
 
 #コピー失敗したら個数加算
 
@@ -10,7 +8,6 @@
 data modify storage infinity_barrel: player.temp_item set from storage infinity_barrel: player.items[-1]
 data modify storage infinity_barrel: player.items[-1].count set from storage infinity_barrel: storage_item.count
 data remove storage infinity_barrel: player.items[-1].Slot
-
 
 #プレイヤーのアイテムとアイテムフレームのアイテムを比較
 #成功($success_data=0)したらアイテムNBTと個数を取得

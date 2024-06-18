@@ -1,8 +1,11 @@
+#> infinity_barrel:set_carried_infinity_barrel
+# アイテム状態のinfinity_barrelが設置された際に実行します。
+# @internal
+
 #収納数を移す
 execute as @e[tag=Carrying_Infinity_Barrel] store result score @s IB_data run data get entity @s Item.components.minecraft:custom_data.Stored
 execute as @e[tag=Carrying_Infinity_Barrel] if data entity @s Item.components.minecraft:custom_data.RemoveTag run data remove entity @s Item.components.minecraft:custom_data
 execute as @e[tag=Carrying_Infinity_Barrel] unless data entity @s Item.components.minecraft:custom_data.RemoveTag run data remove entity @s Item.components.minecraft:custom_data.Stored
-#execute as @e[tag=Carrying_Infinity_Barrel] unless data entity @s Item.components.minecraft:custom_data.RemoveTag run data remove entity @s Item.components.minecraft:custom_data.UUID
 
 #原木に置かれていない場合、アイテム化させる
 execute as @e[tag=Carrying_Infinity_Barrel] at @s positioned ^ ^ ^-0.5 unless block ~ ~ ~ #minecraft:logs run function infinity_barrel:carry_barrel
