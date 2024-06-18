@@ -3,7 +3,7 @@
 # @internal
 
 #
-execute if score $success_entity IB_data matches ..0 as @e[type=minecraft:interaction,tag=infinity_barrel] run kill @s
+#execute if score $success_entity IB_data matches ..0 as @e[type=minecraft:interaction,tag=infinity_barrel] run kill @s
 
 execute as @e[type=minecraft:item_frame,distance=..0.5,tag=infinity_barrel,limit=1,sort=nearest] at @s run function infinity_barrel:set_interaction
 

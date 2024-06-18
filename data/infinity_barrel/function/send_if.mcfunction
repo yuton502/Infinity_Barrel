@@ -1,4 +1,4 @@
-#> infinity_barrel:send
+#> infinity_barrel:send_if
 # プレイヤーにアイテムを渡します。
 # @internal
 

@@ -1,12 +1,14 @@
-#> infinity_barrel:list_find
-# Listタグの中に目的のアイテムが有るかどうかを検索します。ある場合はアイテムNBTと個数を取得します
+#> infinity_barrel:item_finder
+# プレイヤーのインベントリの中に目的のアイテムが有るかどうかを検索します。ある場合はアイテムNBTと個数を取得します
+# @input storage infinity_barrel: storage_item
 # @internal
+
 
 #コピー失敗したら個数加算
 
 #事前にコピー&余計な要素を削除
 data modify storage infinity_barrel: player.temp_item set from storage infinity_barrel: player.items[-1]
-data modify storage infinity_barrel: player.items[-1].Count set from storage infinity_barrel: storage_item.Count
+data modify storage infinity_barrel: player.items[-1].count set from storage infinity_barrel: storage_item.count
 data remove storage infinity_barrel: player.items[-1].Slot
 
 
@@ -16,7 +18,7 @@ data remove storage infinity_barrel: player.items[-1].Slot
 execute store success score $success_data IB_data run data modify storage infinity_barrel: player.items[-1] set from storage infinity_barrel: storage_item
 execute unless data storage infinity_barrel: player.items[-1] run scoreboard players set $success_data IB_data 1
 
-execute if score $success_data IB_data matches ..0 store result score $count IB_data run data get storage infinity_barrel: player.temp_item.Count
+execute if score $success_data IB_data matches ..0 store result score $count IB_data run data get storage infinity_barrel: player.temp_item.count
 execute if score $success_data IB_data matches ..0 run data modify storage infinity_barrel: player.removing_item set from storage infinity_barrel: player.temp_item
 execute if score $success_data IB_data matches ..0 run data modify storage infinity_barrel: player.removing_item.id set from storage infinity_barrel: player.temp_item.id
 
