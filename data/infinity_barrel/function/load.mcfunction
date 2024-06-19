@@ -28,5 +28,5 @@ scoreboard players set $max_storage IB_data 65536
 #村人の削除
 execute as @e[type=minecraft:villager,tag=infinity_barrel] run data merge entity @s {Pos:[0.0d, -65.0d, 0.0d],Health:0f,DeathTime:18s}
 
-tellraw @a ["",{"text":"[Infinity Barrel]","color":"aqua"},{"text":" Ver.3.0.0\n","color":"green"},{"text":"Produced by ","color":"gray"},{"text":"yuton502","color":"white"}]
+tellraw @a ["",{"text":"[Infinity Barrel]","color":"aqua"},{"text":" Ver.3.0.1\n","color":"green"},{"text":"Produced by ","color":"gray"},{"text":"yuton502","color":"white"}]
 

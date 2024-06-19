@@ -16,4 +16,4 @@ execute as @a at @s as @e[type=minecraft:interaction,tag=infinity_barrel,distanc
 execute as @a at @s if entity @e[type=minecraft:item_frame,tag=infinity_barrel,distance=..3.5] anchored eyes run function infinity_barrel:watch_effect
 
 #Infinity Barrelを持っていたら移動速度低下を付与
-execute as @a[predicate=infinity_barrel:have_infinity_barrel] at @s run summon area_effect_cloud ~ ~ ~ {Radius:0f,Duration:6,Age:4,Effects:[{Id:2b,Amplifier:1b,Duration:2,ShowParticles:0b}]}
+execute as @a[predicate=infinity_barrel:have_infinity_barrel] at @s run summon area_effect_cloud ~ ~ ~ {Radius:0f,Duration:6,Age:4,potion_contents:{custom_effects:[{id:"minecraft:slowness",duration:2,amplifier:1,show_particles:0b,show_icon:1}]}}
