@@ -3,6 +3,6 @@
   "entity": "this",
   "predicate": {
     "type": "minecraft:player",
-    "nbt": "{Inventory:[{id:\"minecraft:item_frame\",tag:{\"minecraft:entity_data\":{Tags:[\"Carrying_Infinity_Barrel\"]}}}]}"
+    "nbt": "{Inventory:[{id:\"minecraft:item_frame\",components:{\"minecraft:entity_data\":{Tags:[\"Carrying_Infinity_Barrel\"]}}}]}"
   }
 }
