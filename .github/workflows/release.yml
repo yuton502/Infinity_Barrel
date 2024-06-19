@@ -15,14 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@master
     
-    - run: echo "RELEASE_FILENAME=test_${{ github.event.pull_request.title }}.zip" >> $GITHUB_ENV
+    - run: echo "RELEASE_FILENAME=Infinity_Barrel_${{ github.event.pull_request.title }}.zip" >> $GITHUB_ENV
       
     - name: Archive Release
       uses: thedoctor0/zip-release@main
       with:
         type: 'zip'
         filename: ${{ env.RELEASE_FILENAME }}
-        path: './compress'
         exclusions: '*.git*'
       
     - name: Create Release
