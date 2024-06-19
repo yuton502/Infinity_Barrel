@@ -1,8 +1,0 @@
-{
-  "condition": "minecraft:entity_properties",
-  "entity": "this",
-  "predicate": {
-    "type": "minecraft:player",
-    "nbt": "{Inventory:[{id:\"minecraft:item_frame\",tag:{EntityTag:{Tags:[\"Carrying_Infinity_Barrel\"]}}}]}"
-  }
-}

@@ -1,8 +1,7 @@
-#> infinity_barrel:send
-# プレイヤーにアイテムを渡します。
+#> infinity_barrel:send_if
+# 左クリック時のプレイヤーがいたとき、ファンクションを実行します。
 # @internal
 
-#殴った村人からアイテムフレームを指定
 tag @s add IB_watcher
 scoreboard players set @e[type=minecraft:interaction,tag=infinity_barrel,distance=..3.5] IB_data_success 1
 

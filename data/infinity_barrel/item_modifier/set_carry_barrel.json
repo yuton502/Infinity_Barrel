@@ -1,0 +1,22 @@
+[
+  {
+    "function": "minecraft:set_name",
+    "target": "custom_name",
+    "name": {
+      "text": "Infinity Barrel",
+      "italic": false
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      {
+        "nbt": "Item.id",
+        "storage": "infinity_barrel:",
+        "italic": false,
+        "interpret": true
+      }
+    ],
+    "mode": "append"
+  }
+]

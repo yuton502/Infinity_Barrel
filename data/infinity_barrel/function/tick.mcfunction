@@ -10,7 +10,7 @@ scoreboard players set $success_entity IB_data 0
 #ブロックがない場合村人を削除
 execute as @e[type=minecraft:item_frame,tag=infinity_barrel] at @s positioned ^ ^ ^-0.5 if block ~ ~ ~ air run function infinity_barrel:destroy_infinity_barrel
 
-#execute as @e[type=minecraft:interaction,tag=infinity_barrel] run kill @s
+execute as @a at @s as @e[type=minecraft:interaction,tag=infinity_barrel,distance=4..] run kill @s
 
 #Infinity Barrelを見ていた場合はinteractionを召喚
 execute as @a at @s if entity @e[type=minecraft:item_frame,tag=infinity_barrel,distance=..3.5] anchored eyes run function infinity_barrel:watch_effect
